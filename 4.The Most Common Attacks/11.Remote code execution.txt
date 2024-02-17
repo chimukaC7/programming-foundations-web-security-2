@@ -1,0 +1,22 @@
+Remote code execution
+
+-Read,add,modify,delete files
+-Change access privileges,passwords
+-Turn on and off configurations and services
+-Communicate to other servers
+
+
+Common System Execution Function
+-system, %x,exec,``
+-shel,sh,shell_exec
+-open,popen,proc_open
+-call,subprocess,spawn
+-passthru,eval
+
+-avoid using them
+-disable functions
+-do not use dynamic data
+-validate data,use allow-list
+-sanitize data
+
+- There is one attack that's worse than all the others. Remote code execution. Remote code execution or RCE is when an attacker can remotely execute internal operating system commands on a server. To put it another way, an attacker can type commands as if they were sitting at the keyboard. They can perform any task that a logged in user can perform. They can read, add, modify or delete files. They can change access privileges or passwords. They can turn on and off configurations and services and they can communicate to other servers. When you read a news article or you see a warning about a bug which allows remote code execution, you should pay attention. It's a significant one. Fortunately, remote code execution is also one of the hardest hacks to pull off. Operating systems keep a wall between the operating system and the software running the web server, which is difficult to get through unless you make it easy. Most programming languages have functions which allow them to communicate directly with the underlying OS. It's these special functions that can get you into trouble if you aren't careful. If you use one of these powerful functions and also provide a way that an attacker can slip their own data to it, then they can use that function too. Each programming language uses different names for it's operating system functions. However many use one or more of these common names. Refer to the documentation for the details on your language. All system execution keywords come with big security risks. The best prevention is to avoid using system execution functions at all. Usually there's another solution using less risky code. In some programming languages, it's possible to disable these powerful functions entirely so they cannot be used. If it's absolutely necessary to use them, then avoid pairing them with user submitted or dynamic code. That is the point in which you give an attacker a potential path to the function and should you really, really need to use them with dynamic data, then make sure to validate all data. Use allow-lists to limit the range of actions and sanitize the data for wherever it will be used. Remote code execution attacks are very bad, but they mostly happen because of our own carelessness.

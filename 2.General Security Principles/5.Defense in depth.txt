@@ -1,0 +1,24 @@
+Defense in depth
+
+
+-defensive controls
+	-physical
+	-technical
+		-hardware
+		-software
+		-network protections
+			-firewalls
+			-intrusion detection
+			-antivirus software
+			-event logging
+			-data backups
+	-administrative
+		-training 
+		-writing a security policy
+		-risk assessment
+		-periodic security reviews
+		-data-handling procedures
+		-monitoring
+		-penetration testing
+
+- Skydivers don't just take one parachute with them. They take a second backup parachute in case the first one fails. It's common sense. It's too risky to have a single point of failure, so redundant measures are put in place. This is defense in depth against the threat of gravity. Defense in depth is another way of saying that you have layered defenses. Defense in depth was originally a military term. The idea is to establish layers of defensive measures to slow an attacker down. Imagine a castle at the top of a hill. If an army is going to attack the castle, they'll be tired when they reach the top. Then the army must get past the castle wall, which probably has soldiers on top shooting at them. Then if they can get past those defenses, there may be a second inner wall, more soldiers, and the king and queen may be in a well-fortified keep deep within the castle. The king and queen feel protected by their many defensive layers. The slope of the hill, the wall, the soldiers, the second wall, and the keep. This is an example of defense in depth. Defense in depth decreases your reliance on any one defensive measure, while at the same time, geometrically increasing the difficulty of making a successful attack. If the first defense deters 90% of the attacks, and the second defense deters 90% of the attacks, then in combination, they deter 99% of the attacks. When planning defense in depth for a website, there are there main categories of defenses to consider. Physical, technical, and administrative. Physical controls protect the servers and other computer hardware from physical access or harm. If you're self-hosting your servers, then it includes building access, security guards, access-controlled doors, video cameras, and locks. If your site is being hosted by someone else, It's important to remember, though, that there is no cloud. It's just someone else's computer. Technical controls are comprised of hardware, software, and network protections. System administrators may use firewalls, intrusion detection systems, antivirus software, event logging and data backups to keep systems and networks secure. Web developers can defend web applications with multifactor authentication, by encrypting stored and transmitted data and by applying the least privileged principle to access control and code design. And we will learn more defensive layers in the chapters ahead. Let me give an example where an attacker compromises a web application. Now in the first scenario, there's only a single layer of defense. Once an attacker gains access, they have access to everything. They have root access to the server, they have access to all of the databases, and to the user passwords that are stored in plain text. Okay, now let's imagine a second scenario where we use least privilege and encryption to provide defense in depth. An attacker still gains access to the server, but this time, their access is limited. They aren't a root user, and they can only view the single database used by the web application. And now passwords are encrypted in the database, which provides a further defensive layer. Okay, so we've covered physical and technical controls. Now let's talk about a third area, administrative controls. Administrative controls are the policies and procedures designed to keep systems safe. This includes training, writing a security policy, risk assessments, periodic security reviews, data-handling procedures, monitoring, and penetration testing. Now a large organization may develop strong administrative controls. For a smaller group or for a single developer, this could be as simple as determining who's going to get notified at 3:00 a.m. if a problem is detected and what procedures and options are available. Each one of these controls, whether it's physical, technical, or administrative adds another defensive layer and helps to build defense in depth.

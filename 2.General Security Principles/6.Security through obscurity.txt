@@ -1,0 +1,26 @@
+Security through obscurity
+
+
+Footprinting
+-a systematic exploration of a system's defenses and vulnerabilities
+
+
+Publicly exposed servers
+-domains,subdomains
+-IP address ranges
+-Server ports
+-Software
+
+WHOIS Information
+Website content
+-Employee information
+-Phone numbers, emails
+
+Social media
+-LinkedIn, Facebook, Twitter
+-Out-of-office-notifications
+
+Forum post
+
+
+- Security through obscurity is our next core security principle. It has a nice rhyme to it. It means that it's more secure to withhold or obscure information because information is valuable to an attacker. Another nice rhyme first popularized during World War Two is, "Loose lips might sink ships." Careless talk during wartime may provide the enemy with information that would help them to strategize or to plan better attacks. Learning new information benefits an attacker. It never benefits a defender. Therefore the less information you give out, the better. Information should be kept on a need-to-know basis. It's similar to the principle of least privilege that we saw earlier. Give out the least amount of information necessary to complete the job. Most Hollywood heist films have a scene where the heroes perform some reconnaissance on their target. They watch the outside of the building through binoculars. They wait patiently as key personnel come and go so they can create a schedule of their daily routine. They photograph the security guards. They make maps and note the locations of security cameras. When hackers perform reconnaissance on computer systems it's called footprinting. Footprinting is a systematic exploration of a system's defenses and vulnerabilities. An attacker engaging in footprinting might seek to discover what servers are visible on the network, explore an organization's security procedures both online and offline, watch for activity patterns which occur daily, weekly, or monthly, or examine an organization's waste and information disposal practices. This information is helpful for strategizing and for planning an attack. Hackers might examine the public domains, subdomains, and IP address ranges looking for patterns or clues. For example, a gap in otherwise consecutive IP addresses might help them to discover a new server. It's easy to scan a server and to list the software and services available on all of the open ports. As a web developer, you want to be mindful about what information you're broadcasting. For example, do URLs include file extensions such as dot PHP? An attacker can tell what server-side language is being used. Configure your web server or application to remove them. Does the HTTP response header include software version information? Learn how to modify the configuration so that you can hide it. If these server details remain unknown then a hacker must plan for all possibilities. Information allows an attacker to focus their attention and to make plans in advance more easily. Hackers also use indirect information when footprinting. The WHOIS database enables searching for information about the registered owner of a domain. It allows a hacker to discover the person or organization behind a URL and to view real-world contact information. Most domain registrars offer the ability to hide your information from the database. Posting employee and contact information can provide useful information to a potential hacker. Knowing the names of authorized users makes it easier to guess usernames and email addresses. Contact information may make it easier to target users or to trick them into helping a hacker. Social media can reveal a lot of information about individuals. Knowing someone's former university or the names of their pets may help to guess passwords or to craft an effective phishing email. Knowing when employees are on vacation can help an attacker choose favorable timing. Online forums can be a useful resource to help with technical problems but airing those problems in public can also expose information. I've seen a forum post by a networking administrator which included his complete firewall configuration file. It was posted using his company email address. An attacker could use a search engine to find his configuration and to identify his company. Security by obscurity often gets a bad rap. You may hear the phrase, "Security through "obscurity is no security at all." Obscurity is a good defense but it works best when added to other defenses. Keeping money in a safe hidden behind a painting is more secure than in a safe sitting The safe must be discovered first and then cracked open. However, merely keeping money behind a painting would be weak security. Obscurity alone as a single line of defense should be discouraged. Obscurity helps add defense in depth and makes other defenses stronger.

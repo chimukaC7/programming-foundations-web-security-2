@@ -1,0 +1,49 @@
+Map exposure points and data passageways
+
+-mapping helps to define the attack surface
+
+-mapping data input(receiving data into an application)
+	-URLs
+	-Forms
+	-Cookies
+	-Session data
+	-Database reads
+	-APIs
+
+-mapping data in transition(data sent from one point to another)
+	-internet
+	-wireless communications
+	-network hardware
+	-network software
+
+
+-mapping data in storage
+	-databases
+	-harddrives
+	-the cloud
+	-portable media(flash drives,CD)
+	-backup files
+
+
+-mapping data output
+	-HTML, CSS, JavaScript
+	-JSON, XML, CSV
+	-Cookies
+	-Sessional dat
+	-Database writes
+	-APIs
+	-Log files
+
+
+
+
+Confidentiality, Integrity and Avialability(CIA)
+
+Data Security Goals: CIA
+-Confidetiality - data is only available to priviledged users
+-Integrity - data is correct and can be trusted
+-Availability - data is available when needed
+
+
+
+- Our final general security principle is to map your exposure points and data passageways. Remember the fundamental security equation from the beginning of this chapter, it was Awareness plus Adequate Protection equals Security. Mapping data movement and exposure increases awareness of vulnerabilities. Once we're aware of them then we can protect them. You can't secure a door if you don't know it exists. Mapping helps to define the attack surface. The attack surface is made up of all the points that are accessible to an attacker. It's where they could get data in or get data out. If you were mapping exposure points for the castle, the attack surface might be made up of walls, doorways, gates bridges and tunnels. You can think of your map as a security checklist. you may decide to create a list in a word processor or to draw out diagrams on paper showing the paths the data takes. You should take inventory of where data enters your systems how it moves between system parts and where it's stored or how its returned to the user or to other outlets. Let's look at some of the typical exposure points of web applications. For Mapping Data Input there are the URLs that get typed into the browser Forms, Cookies and Sessions also contain incoming data, data enters the web application any time you retrieve information from a Database and public APIs or application programming interfaces are designated pathways for receiving data into an application. You want to be suspicious of all incoming data. Data in Transition is data that's sent from one point to another. It can be vulnerable if it passes through insecure hardware, vulnerable software or if the data is translated or transformed in any way. In many cases data will arrive to a web server which will process the request and send back response entirely on its own. Other web applications may access a database that's hosted on a separate server or store files on a remote server. This requires sending information through networking hardware and software and these pathways need to be mapped. Cloud services like Microsoft Azure and Amazon S3 are common examples. Data can be stored in many places and it's important to keep it safe when it's not in use. Mappings storage locations allows you to ensure that it has both physical and technical access controls to protect it. You should map where data is Output. Output can contain bad data that's used to exploit or create vulnerabilities. A common and potent example is JavaScript designed to do harm when it's received by users browser. Focusing on where data enters and leaves your server where data travels and where data is stored we'll help you to understand the topography of your system. After all web security is an exercise in data security, and data security has three goals; Confidentiality, Integrity and Availability. Most people remember them by their first letters, CIA. Data confidentiality includes protecting personal information of your users and proprietary information of your organization. Credit cards and passwords are the most high-profile items to keep Confidential. Data Integrity naturally receives the most focus. We don't want hackers making malicious changes. Data availability is often overlooked but is important protecting the Confidentiality and Integrity of data means little if it can't be accessed. Denial of service attacks and ransomware are threats to a data Availability. Once you have a good map of vulnerabilities, you can take steps to protect them against any threats to Confidentiality Integrity and Availability.

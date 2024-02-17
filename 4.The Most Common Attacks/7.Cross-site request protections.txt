@@ -1,0 +1,21 @@
+Cross-site request protections
+
+
+CSRF Tokens
+<input type="hidden" name="csrf_token" values="d786d9abbcf39042...">;
+
+
+1.Generate a ling,unique, random string to be a token
+2.Add the token to the user's session data
+3.Add the token to the HTML form
+4.When form data is received,compare the tokens
+5.If the tokens match, then the form is valid
+
+CSRF defenses rely on having good XSS defenses
+
+Other CSRF defenses
+-validate the HTTP referer header
+-add custom header to Ajax XMLHttpRequest
+-use SameSite cookie attribute
+
+- Let's learn how to protect our websites from Cross-Site Request Forgery attacks. The simplest defense against CSRF attacks is to put some thought into which pages use GET and POST requests. Use GET requests for retrieving data, not for actions which make changes. Use POST requests, such as form submissions, for actions which make changes. An image source tag will always send a GET request. The HTML is expecting to read an image, not to make a change. If the bank require transfers to use POST requests, then this URL would be rejected for being the wrong request type. Now this does not prevent CSRF attacks, but it prevents those that are easiest to craft. The strongest defense against CSRF attacks is to use CSRF tokens. Here's how it works. First, you generate a long, unique random string which can act as a token. Then you store it in the user's session data. The session data is usually kept on the server, so the user or an attacker would not be able to inspect it. When you create an HTML form, you include the token in the form data. Make it a hidden input field. When the form is submitted, the value of the CSRF token will be included in the form data. The code that processes the form data can verify that the form is authentic by retrieving the token stored in the session and comparing it to the token sent by the form. If they match, the form is authentic and not forged. If the token is missing or does not match, This is a simple CSRF token implementation, and there are variations and improvements which can be made. A token could be only valid for a limited time period. The form token and the session token could be different, complimentary values. For example, encrypting one string could return the other string. CSRF tokens have one big weakness, did you spot it already? If a website is vulnerable to cross-site scripting attacks, then an attacker has a path around our defense. An attacker might be able to access values stored in the session, to read the token, or an attacker might use Ajax to submit a request that returns a token and then immediately paste that token into their forged request. Your CSRF defenses rely on having good XSS defenses in place. There are several other defenses, which are not strong enough on their own, but which are useful for providing defense in-depth. An authentic form submission should include a referrer, which is from your domain. A matching referrer is not complete proof that a request is authentic because the referrer value can be spoofed. But if the referrer is missing or wrong, then it indicates a forgery. For forms that use Ajax, you can set a custom header in the XMLHttpRequest, and then validate that the header is present. Browser support is still growing for the SameSite cookie attribute. It's similar to the HttpOnly attribute, but it prevents the browser from sending cookies with forged requests. Some actions are extremely sensitive. For example, changing a username, email, or password, modifying security preferences, or transferring money. The best protection for these pages is to require a second action to confirm the change. It could be a confirmation page before an order is submitted. Some sites use a CAPTCHA image to test whether a person is present. Or it could require re-authentication by providing a password again. A CSRF attack would not be able to respond to the confirmation request. A confirmation page is overkill on most forms, but it can be worthwhile in some places. Regulating GET and POST requests and using CSRF tokens with help from these other defenses will protect your site from CSRF attacks.

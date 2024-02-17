@@ -1,0 +1,7 @@
+Label variables
+
+use Names to identify condition of data
+	dirty,raw,unsafe
+	clean,sanitized,safe
+
+- It's important to keep track of which data has been sanitized and which has not. We can use variable names to label which data is potentially dangerous and which data is safe to use. Before sanitization we can use names such as dirty, raw or unsafe. After sanitization we can use names such as clean, sanitized or safe. Let me show you an example using PHP. An email address is received from a webform and assigned to the variable raw_email. The prefix raw makes it obvious that it has not been sanitized. After the value passes through a sanitize function it's assigned to a new variable, safe_email. The prefix safe makes it clear the data has now been sanitized. Of course it can also be done as a one step process without using the variable raw_email, but still the variable name indicates that it has been sanitized. Here's another example using Ruby on Rails. An empty hash is assigned to the variable dirty_params. Several request parameters are added to it. Then the sanitize method is called on each one in turn and the result is assigned to a new variable called clean_params. Using variable names as labels is a simple, effective way to keep track of the security condition of your data so they can help you to avoid simple mistakes.
